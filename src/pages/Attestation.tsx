@@ -55,17 +55,39 @@ export default function Attestation() {
 
   return (
     <main className="min-h-screen">
-      {/* Hero Section */}
+      {/* Hero Section (enhanced) */}
       <section className="bg-white border-b border-outline-variant py-20 bg-pattern">
         <div className="max-w-[1200px] mx-auto px-10 text-center">
-          <h1 className="text-5xl font-display font-bold text-primary mb-6">Document Attestation</h1>
-          <p className="text-lg text-on-surface-variant max-w-2xl mx-auto mb-12 leading-relaxed font-light">
-            Comprehensive verification and legalization for your important certificates and documents.
-          </p>
+          <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} className="max-w-2xl mx-auto">
+            <span className="inline-block py-1 px-3 bg-secondary-container text-on-secondary-container text-xs font-bold rounded-full mb-6">ESTABLISHED 2008</span>
+            <h1 className="text-5xl font-display font-bold text-primary mb-6">Document Attestation</h1>
+            <p className="text-lg text-on-surface-variant max-w-2xl mx-auto mb-12 leading-relaxed font-light">
+              Comprehensive verification and legalization for your important certificates and documents — from educational transcripts to commercial records, we ensure global acceptability.
+            </p>
+          </motion.div>
         </div>
       </section>
 
       {/* Services Grid */}
+      {/* Showcase Section: image + content */}
+      <section className="py-20 bg-surface-bright">
+        <div className="max-w-[1200px] mx-auto px-10 grid md:grid-cols-2 gap-12 items-center">
+          <motion.div initial={{ opacity: 0, x: -12 }} animate={{ opacity: 1, x: 0 }} className="rounded-2xl overflow-hidden border border-outline-variant shadow-sm h-[420px]">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop" alt="Document attestation" className="w-full h-full object-cover" />
+          </motion.div>
+
+          <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}>
+            <h2 className="text-3xl font-display font-bold text-primary mb-4">Comprehensive Document Care</h2>
+            <p className="text-on-surface-variant mb-6 leading-relaxed">From educational transcripts to commercial paperwork, our team validates, certifies and prepares documents for international acceptance — with clear steps and timelines.</p>
+            <ul className="space-y-3 mb-6">
+              <li className="flex items-start gap-3 text-sm"><span className="material-symbols-outlined text-primary">check_circle</span> Professional verification and formatting</li>
+              <li className="flex items-start gap-3 text-sm"><span className="material-symbols-outlined text-primary">check_circle</span> MEA, Apostille and state-level processing</li>
+              <li className="flex items-start gap-3 text-sm"><span className="material-symbols-outlined text-primary">check_circle</span> Secure physical handling and returns</li>
+            </ul>
+            <Link to="/detail" className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-xl font-bold hover:opacity-90">View Service Options <span className="material-symbols-outlined">arrow_forward</span></Link>
+          </motion.div>
+        </div>
+      </section>
       <section className="max-w-[1200px] mx-auto px-10 py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((item, index) => (

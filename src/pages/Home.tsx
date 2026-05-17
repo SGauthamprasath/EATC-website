@@ -23,10 +23,6 @@ export default function Home() {
               VeriCert provides seamless, secure, and fast embassy and educational attestation services globally. We handle the complexity, you get peace of mind.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-primary text-white px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:opacity-90 transition-opacity">
-                Start Your Application
-                <span className="material-symbols-outlined">arrow_forward</span>
-              </button>
               <button className="bg-white border border-outline-variant text-primary px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-surface-container transition-colors">
                 Track Document Status
               </button>
@@ -43,21 +39,7 @@ export default function Home() {
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEg4YnSuYDQOCmHGYoh1jwLW9ZcdYlEFPXectkkXz_kTtVwz-Ux8xknbLD9Tm_UZZqn5CqxkN7yeYFX6nSEzUBzhXUbvwqqCFAdDS04xMI-c7VS4C8ymcvGCY_xXttESUzW-qiPld0BPL1K3vsqlkb_WoRZz3oqXCYemRQecUs-ex1LkZWNvAFGKj_kUZz6EuQkRuDMPnUrhBA87Hm-PfF0DmkSVs4EfwgakkPIOyMm6d8P_t6hmW7yu_6QX26nsR1lkZ_iiD3Wvc" 
               alt="Professional Business Setting"
             />
-            {/* Floating Status Card */}
-            <motion.div 
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.5 }}
-              className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl border border-outline-variant shadow-xl flex items-center gap-4"
-            >
-              <div className="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center">
-                <span className="material-symbols-outlined text-primary text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>task_alt</span>
-              </div>
-              <div>
-                <p className="text-xs text-on-surface-variant font-medium">Document Status</p>
-                <p className="text-lg font-bold text-primary">Verified & Dispatched</p>
-              </div>
-            </motion.div>
+            {/* Floating status card removed per design update */}
           </motion.div>
         </div>
       </section>

@@ -53,6 +53,25 @@ export default function OtherServices() {
       </section>
 
       {/* Services Grid */}
+      {/* Showcase Section: image + content */}
+      <section className="py-20 bg-surface-bright">
+        <div className="max-w-[1200px] mx-auto px-10 grid md:grid-cols-2 gap-12 items-center">
+          <motion.div initial={{ opacity: 0, x: -12 }} animate={{ opacity: 1, x: 0 }} className="rounded-2xl overflow-hidden border border-outline-variant shadow-sm h-[420px]">
+            <img src="https://images.unsplash.com/photo-1528747045269-390fe33c19d2?q=80&w=2070&auto=format&fit=crop" alt="Support services" className="w-full h-full object-cover" />
+          </motion.div>
+
+          <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}>
+            <h2 className="text-3xl font-display font-bold text-primary mb-4">Support Services That Move With You</h2>
+            <p className="text-on-surface-variant mb-6 leading-relaxed">Beyond attestations, we provide PCCs, translations, notary services and verification for credential evaluation — all coordinated end-to-end.</p>
+            <ul className="space-y-3 mb-6">
+              <li className="flex items-start gap-3 text-sm"><span className="material-symbols-outlined text-primary">check_circle</span> Certified translations and notarizations</li>
+              <li className="flex items-start gap-3 text-sm"><span className="material-symbols-outlined text-primary">check_circle</span> Credential evaluation support (WES, IQAS)</li>
+              <li className="flex items-start gap-3 text-sm"><span className="material-symbols-outlined text-primary">check_circle</span> Custom packages for frequent corporate clients</li>
+            </ul>
+            <Link to="/contact" className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-xl font-bold hover:opacity-90">Contact Us <span className="material-symbols-outlined">arrow_forward</span></Link>
+          </motion.div>
+        </div>
+      </section>
       <section className="max-w-[1200px] mx-auto px-10 py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (

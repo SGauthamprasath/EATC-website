@@ -84,53 +84,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* Strategic Leadership */}
-      <section className="py-24 bg-surface-container">
-        <div className="max-w-[1200px] mx-auto px-10">
-          <div className="mb-16 max-w-2xl">
-            <h2 className="text-3xl font-display font-bold text-primary">Strategic Leadership</h2>
-            <p className="text-on-surface-variant mt-4 leading-relaxed">
-              Led by experts in international law and administrative governance with decades of collective experience in diplomatic attestation.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { 
-                name: 'David Sterling', 
-                role: 'Chief Executive Officer', 
-                desc: 'Former legal consultant for international diplomatic corps with 20+ years in document legalization.',
-                img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBpv22zCdpBIIAd7XFGMgJxoamlJPYBdI-XOuryPhJSBVmwqxlXL2eo3ScFE2c6Uuu_G8ynF0gMZS9XUpAaRaZntT8RpmED6FaxyG4cFoJJZi1HqBgAwpeOgf6GZlmmnYUxMegVaEiGKw1YHBjD4kXItx7k7s2HMGOi4n7MHEsimRpTN0WNQULsmXU01HjjHRJ_3mkawqP0T8fsAqahJ1wTrRMrYaZD-GinhRVbhQCn3ZaKD0tJ9B3BhfjiInQf4a_ZmxfbAckmLkE'
-              },
-              { 
-                name: 'Elena Rodriguez', 
-                role: 'Operations Director', 
-                desc: 'Specialist in global administrative workflows and embassy relations management across EMENA regions.',
-                img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCgSRM8bxkEh1CSfEETreo0KrX7bIxaPqFKDoAHLOjE2K-kxsLO9JyvrDYjMRsnoE2gmPj9PzH-y5-v5b29LJwDmACTPkYxlbAFyDtYirUmcMx-RZ3n0N9pfDRFymwDUsdcMliTeTozochTpOgIga3OlIIo5PrroLEzIqjpk6USuwIKgszb3MS3XYMIsdH-kHdUhhlFkojrGYRbuoY3joHzmkUIxiIoAdMhTKN3bokWJ-Lz5eRl96fkpNHPmc7yPfTThAdLKgfmr5w'
-              },
-              { 
-                name: 'Marcus Thorne', 
-                role: 'Head of Legal Compliance', 
-                desc: 'Ensuring rigorous adherence to ISO standards and international treaties for document authentication.',
-                img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCFXA7eRwfvDdtqf0sLWVZdJxDXsWPm2fBniKiPC3pbBl98S92vDrH4oRXn1cE0KAoZlNVB5UiIzwGZW-ViXMs2xgVsRonComvK_KXqP9gL0TIsuFyPzdPVNcOqpMBTHH5VtnDQkYOBZDjR-uADAVPplyuATGFZtykYuXhBtxDdaZeFDbTIfytARoDs6Aq0IKZG5SXUpV0UNXKXuc_XkJscqH19OwVxyGxcMAO6-RZKw8OYWAtA6opWs2VewwWeoPe5G3188u6FJ4Y'
-              }
-            ].map((leader) => (
-              <div key={leader.name} className="group">
-                <div className="aspect-[3/4] bg-surface-container-high overflow-hidden rounded-2xl mb-6 border border-outline-variant">
-                  <img 
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" 
-                    src={leader.img} 
-                    alt={leader.name} 
-                  />
-                </div>
-                <h4 className="text-xl font-display font-bold text-primary">{leader.name}</h4>
-                <p className="text-[10px] text-on-primary-container font-bold uppercase tracking-widest mt-1 mb-3">{leader.role}</p>
-                <p className="text-xs text-on-surface-variant font-medium leading-relaxed">{leader.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Strategic Leadership removed as requested */}
 
       {/* Trust Quote */}
       <section className="py-24 bg-primary text-white text-center">

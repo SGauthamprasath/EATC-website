@@ -47,13 +47,6 @@ export default function Navbar() {
         </nav>
 
         <div className="flex items-center gap-4">
-          <button className="hidden lg:block text-sm font-medium text-on-surface-variant hover:text-primary transition-colors">
-            Client Login
-          </button>
-          <button className="bg-primary text-white px-6 py-2.5 rounded text-sm font-bold hover:opacity-90 transition-opacity">
-            Get Started
-          </button>
-          
           {/* Mobile Menu Toggle */}
           <button 
             onClick={() => setIsOpen(!isOpen)}
@@ -91,10 +84,6 @@ export default function Navbar() {
                 </Link>
               ))}
               <div className="h-px bg-outline-variant my-2" />
-              <button className="w-full bg-primary text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2">
-                Get Started
-                <span className="material-symbols-outlined text-base">arrow_forward</span>
-              </button>
             </div>
           </motion.nav>
         )}

@@ -42,17 +42,39 @@ export default function EmbassyAttestation() {
 
   return (
     <main className="min-h-screen">
-      {/* Hero Section */}
+      {/* Hero Section (enhanced) */}
       <section className="bg-white border-b border-outline-variant py-20 bg-pattern">
         <div className="max-w-[1200px] mx-auto px-10 text-center">
-          <h1 className="text-5xl font-display font-bold text-primary mb-6">Embassy Attestation Services</h1>
-          <p className="text-lg text-on-surface-variant max-w-2xl mx-auto mb-12 leading-relaxed font-light">
-            Direct coordination with foreign embassies and consulates for visa, residency, and immigration requirements globally.
-          </p>
+          <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} className="max-w-2xl mx-auto">
+            <span className="inline-block py-1 px-3 bg-secondary-container text-on-secondary-container text-xs font-bold rounded-full mb-6">ESTABLISHED 2008</span>
+            <h1 className="text-5xl font-display font-bold text-primary mb-6">Embassy Attestation Services</h1>
+            <p className="text-lg text-on-surface-variant max-w-2xl mx-auto mb-12 leading-relaxed font-light">
+              Direct coordination with foreign embassies and consulates for visa, residency, and immigration requirements globally. We manage protocols, translations and official liaison so you don't have to.
+            </p>
+          </motion.div>
         </div>
       </section>
 
       {/* Embassy Grid */}
+      {/* Showcase Section: image + content */}
+      <section className="py-20 bg-surface-bright">
+        <div className="max-w-[1200px] mx-auto px-10 grid md:grid-cols-2 gap-12 items-center">
+          <motion.div initial={{ opacity: 0, x: -12 }} animate={{ opacity: 1, x: 0 }} className="rounded-2xl overflow-hidden border border-outline-variant shadow-sm h-[420px]">
+            <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2070&auto=format&fit=crop" alt="Embassy coordination" className="w-full h-full object-cover" />
+          </motion.div>
+
+          <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}>
+            <h2 className="text-3xl font-display font-bold text-primary mb-4">Seamless Embassy Liaison</h2>
+            <p className="text-on-surface-variant mb-6 leading-relaxed">We take care of the entire embassy attestation lifecycle — document checks, translations, embassy submissions and courier returns — with transparent timelines and case tracking.</p>
+            <ul className="space-y-3 mb-6">
+              <li className="flex items-start gap-3 text-sm"><span className="material-symbols-outlined text-primary">check_circle</span> Dedicated case manager for embassy follow-ups</li>
+              <li className="flex items-start gap-3 text-sm"><span className="material-symbols-outlined text-primary">check_circle</span> Fast-track options for urgent consular windows</li>
+              <li className="flex items-start gap-3 text-sm"><span className="material-symbols-outlined text-primary">check_circle</span> Door-to-door courier and secure handling</li>
+            </ul>
+            <Link to="/contact" className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-xl font-bold hover:opacity-90">Get Assistance <span className="material-symbols-outlined">arrow_forward</span></Link>
+          </motion.div>
+        </div>
+      </section>
       <section className="max-w-[1200px] mx-auto px-10 py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {embassies.map((item, index) => (
