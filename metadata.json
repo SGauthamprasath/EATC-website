@@ -1,0 +1,8 @@
+{
+  "name": "VeriCert Attestation",
+  "description": "Professional, legal-grade document verification and attestation services with absolute precision.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
