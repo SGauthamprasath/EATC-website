@@ -43,12 +43,23 @@ export default function EmbassyAttestation() {
   return (
     <main className="min-h-screen">
       {/* Hero Section (enhanced) */}
-      <section className="bg-white border-b border-outline-variant py-20 bg-pattern">
-        <div className="max-w-[1200px] mx-auto px-10 text-center">
-          <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} className="max-w-2xl mx-auto">
-            <span className="inline-block py-1 px-3 bg-secondary-container text-on-secondary-container text-xs font-bold rounded-full mb-6">ESTABLISHED 2008</span>
-            <h1 className="text-5xl font-display font-bold text-primary mb-6">Embassy Attestation Services</h1>
-            <p className="text-lg text-on-surface-variant max-w-2xl mx-auto mb-12 leading-relaxed font-light">
+      <section className="relative h-[600px] flex items-center overflow-hidden bg-pattern">
+        <div className="absolute inset-0 z-0">
+          <img 
+            className="w-full h-full object-cover grayscale opacity-30" 
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzkcIszeZ9xWItQ2-USAtmDyShMNKtG6M_ctcRplsz7Zh_TwONcVWXIpnykJtZGIs8m_eYi4ErLgdTsv0q6xxROpPRNJfJqFFvu6Hn0ksNXuPhUJHfLC13i8RTm_Pla84H00CA9ewmOcnd78ucnEfquPzWI4H7JORUyy_7UZxbkS7TOgUanK4UoNWkEe1T8j_6ukKPN79-P-h_r433---pP74wZxSoVwBw0YsvrWfJf1D3BFX92xHFlbOXT78FPfWSU4Kcdn0o4bQ" 
+            alt="Corporate Interior"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-white to-transparent"></div>
+        </div>
+        <div className="relative z-10 max-w-[1200px] mx-auto px-10 w-full">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="max-w-2xl"
+          >
+            <h1 className="text-5xl font-display font-bold text-primary mb-8">Embassy Attestation Services</h1>
+            <p className="text-lg text-on-surface-variant leading-relaxed">
               Direct coordination with foreign embassies and consulates for visa, residency, and immigration requirements globally. We manage protocols, translations and official liaison so you don't have to.
             </p>
           </motion.div>

@@ -4,18 +4,26 @@ export default function Contact() {
   return (
     <main className="min-h-screen">
       {/* Header */}
-      <section className="bg-white border-b border-outline-variant py-20 text-center">
-        <div className="max-w-[1200px] mx-auto px-10">
-          <motion.h1 
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="text-5xl font-display font-bold text-primary mb-6"
+      <section className="relative h-[600px] flex items-center overflow-hidden bg-pattern">
+        <div className="absolute inset-0 z-0">
+          <img 
+            className="w-full h-full object-cover grayscale opacity-30" 
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzkcIszeZ9xWItQ2-USAtmDyShMNKtG6M_ctcRplsz7Zh_TwONcVWXIpnykJtZGIs8m_eYi4ErLgdTsv0q6xxROpPRNJfJqFFvu6Hn0ksNXuPhUJHfLC13i8RTm_Pla84H00CA9ewmOcnd78ucnEfquPzWI4H7JORUyy_7UZxbkS7TOgUanK4UoNWkEe1T8j_6ukKPN79-P-h_r433---pP74wZxSoVwBw0YsvrWfJf1D3BFX92xHFlbOXT78FPfWSU4Kcdn0o4bQ" 
+            alt="Corporate Interior"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-white to-transparent"></div>
+        </div>
+        <div className="relative z-10 max-w-[1200px] mx-auto px-10 w-full">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="max-w-2xl"
           >
-            Connect with our Experts
-          </motion.h1>
-          <p className="text-lg text-on-surface-variant max-w-2xl mx-auto leading-relaxed font-light">
-            Providing legal-grade attestation services with absolute precision. Our dedicated team is ready to assist you with your global documentation needs.
-          </p>
+            <h1 className="text-5xl font-display font-bold text-primary mb-8">Connect with our Experts</h1>
+            <p className="text-lg text-on-surface-variant leading-relaxed">
+              Providing legal-grade attestation services with absolute precision. Our dedicated team is ready to assist you with your global documentation needs.
+            </p>
+          </motion.div>
         </div>
       </section>
 
@@ -30,7 +38,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="text-lg font-display font-bold text-primary">Direct Assistance</h3>
-                  <p className="text-sm text-on-surface-variant font-medium mt-1">+1 (555) 234-8900</p>
+                  <p className="text-sm text-on-surface-variant font-medium mt-1">011 4286 0201</p>
                   <p className="text-[10px] font-bold text-on-surface-variant mt-3 uppercase tracking-widest opacity-70">Mon - Fri, 9am - 6pm EST</p>
                 </div>
               </div>
@@ -55,8 +63,8 @@ export default function Contact() {
                   <span className="material-symbols-outlined text-primary">location_on</span>
                 </div>
                 <div>
-                  <h3 className="text-lg font-display font-bold text-primary">Global HQ</h3>
-                  <p className="text-sm text-on-surface-variant font-medium mt-1 leading-relaxed">1200 Avenue of the Americas<br/>Suite 450, New York, NY 10036</p>
+                  <h3 className="text-lg font-display font-bold text-primary">Location</h3>
+                  <p className="text-sm text-on-surface-variant font-medium mt-1 leading-relaxed">G92-Pratap complex<br/>First Floor-No 117<br/>Munirka, New Delhi-110067, India<br/>Landmark: Near Metro Station- Gate no.3<br/>Ph: 9790687070<br/>9942457070</p>
                   <div className="mt-8 flex gap-2">
                     <span className="bg-surface-container px-3 py-1.5 rounded-full text-[10px] font-bold text-primary uppercase tracking-wider">Verified Hub</span>
                     <span className="bg-surface-container px-3 py-1.5 rounded-full text-[10px] font-bold text-primary uppercase tracking-wider">Legal District</span>

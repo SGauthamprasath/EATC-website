@@ -20,7 +20,7 @@ export default function Navbar() {
     <header className="bg-white border-b border-outline-variant sticky top-0 w-full z-50">
       <div className="max-w-[1200px] mx-auto px-6 md:px-10 flex justify-between items-center h-20">
         <Link to="/" className="text-xl font-display font-bold text-primary z-50">
-          VeriCert Attestation
+          EATC Group
         </Link>
         
         {/* Desktop Navigation */}
