@@ -5,12 +5,12 @@ export default function Footer() {
     <footer className="bg-white border-t border-outline-variant mt-20">
       <div className="max-w-[1200px] mx-auto px-10 py-12 flex flex-col md:flex-row justify-between gap-12">
         <div className="max-w-sm">
-          <div className="text-xl font-display font-bold text-primary mb-4">VeriCert Attestation</div>
+          <div className="text-xl font-display font-bold text-primary mb-4">EATC GROUP</div>
           <p className="text-sm text-on-surface-variant leading-relaxed">
             Reliable, legal-grade verification for all your global documentation needs. Precision in every seal.
           </p>
           <div className="mt-8 text-xs text-on-surface-variant">
-            © 2024 VeriCert Attestation Services. Legal-grade reliability.
+            © EATC GROUP Services. Legal-grade reliability.
           </div>
         </div>
 

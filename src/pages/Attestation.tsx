@@ -58,7 +58,7 @@ export default function Attestation() {
       img: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070&auto=format&fit=crop'
     },
     {
-      title: 'Home Department Attestation',
+      title: 'MOFA Attestation',
       desc: 'State home department verification for internal security clearance.',
       icon: 'home',
       img: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070&auto=format&fit=crop'

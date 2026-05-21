@@ -1,16 +1,12 @@
 import { motion } from 'motion/react';
+import { title } from 'process';
 import { Link } from 'react-router-dom';
 
 export default function OtherServices() {
   const services = [
     { 
-      title: 'UAE PCC', 
-      desc: 'Police Clearance Certificate for United Arab Emirates visas and employment.',
-      img: 'https://images.unsplash.com/photo-1577416416181-f284239bd4d0?q=80&w=2070&auto=format&fit=crop'
-    },
-    { 
-      title: 'Oman PCC', 
-      desc: 'Official PCC procurement for the Sultanate of Oman residency requirements.',
+      title: 'QR Code Apostille', 
+      desc: 'Secure digital verification for Hague Convention member countries with QR code validation.',
       img: 'https://images.unsplash.com/photo-1549443165-1756b7342783?q=80&w=2070&auto=format&fit=crop'
     },
     { 
@@ -29,14 +25,29 @@ export default function OtherServices() {
       img: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?q=80&w=2066&auto=format&fit=crop'
     },
     { 
-      title: 'WES/IQAS Verification', 
-      desc: 'WES, IQAS, and ICAS verification for North American educational equivalency.',
-      img: 'https://images.unsplash.com/photo-1523050335102-c3251c17b384?q=80&w=2070&auto=format&fit=crop'
+      title: 'Family Reunion', 
+      desc: 'Documentation support for family sponsorship and reunion visa applications.',
+      img: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070&auto=format&fit=crop'
     },
     { 
       title: 'Notary Services', 
       desc: 'Public notary and state-level verification for legal validity.',
       img: 'https://images.unsplash.com/photo-1589216532372-1c2a367900d9?q=80&w=2070&auto=format&fit=crop'
+    },
+    {
+      title: 'Travel Insurance',
+      desc: 'Comprehensive travel insurance plans for visa applications and global travel.',
+      img: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070&auto=format&fit=crop'
+    },
+    {
+      title: 'Dummy Ticket',
+      desc: 'Temporary flight reservation for visa application purposes without actual booking.',
+      img: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070&auto=format&fit=crop'
+    },
+    {
+      title: 'Passport & Visa Print',
+      desc: 'High-quality printing and lamination for passports, visas, and official documents.',
+      img: 'https://images.unsplash.com/photo-1577416416181-f284239bd4d0?q=80&w=2070&auto=format&fit=crop'
     }
   ];
 

@@ -129,7 +129,7 @@ export default function Contact() {
               <span className="material-symbols-outlined text-white text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>domain</span>
             </div>
             <div>
-              <p className="text-lg font-display font-bold text-primary">VeriCert Office</p>
+              <p className="text-lg font-display font-bold text-primary">EATC Group Office</p>
               <p className="text-xs font-medium text-on-surface-variant">Global Operations Center</p>
             </div>
           </div>

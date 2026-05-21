@@ -1,4 +1,6 @@
 import { motion } from 'motion/react';
+import { desc } from 'motion/react-client';
+import { title } from 'process';
 import { Link } from 'react-router-dom';
 
 export default function EmbassyAttestation() {
@@ -19,7 +21,7 @@ export default function EmbassyAttestation() {
       img: 'https://images.unsplash.com/photo-1594993872205-096d29944ac8?q=80&w=2072&auto=format&fit=crop'
     },
     { 
-      title: 'Malaysian Attestation', 
+      title: 'Oman Attestation', 
       desc: 'Wisma Putra and High Commission legalization services.',
       img: 'https://images.unsplash.com/photo-1528607929212-2636ec44253e?q=80&w=2038&auto=format&fit=crop'
     },
@@ -32,6 +34,16 @@ export default function EmbassyAttestation() {
       title: 'Bahrain Attestation', 
       desc: 'Ministry of Foreign Affairs seals for Kingdom of Bahrain.',
       img: 'https://images.unsplash.com/photo-1548013146-72479768bbaa?q=80&w=2073&auto=format&fit=crop'
+    },
+    {
+      title: 'USA Attestation',
+      desc: 'State Department and embassy legalization for US-bound documents.',
+      img: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070&auto=format&fit=crop'
+    },
+    {
+      title: 'UK Attestation',
+      desc: 'Foreign and Commonwealth Office attestation for UK visa applications.',
+      img: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2070&auto=format&fit=crop'
     },
     { 
       title: 'Other Attestation', 

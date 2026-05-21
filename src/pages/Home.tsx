@@ -190,9 +190,7 @@ export default function Home() {
               <p className="text-on-surface-variant mb-8 leading-relaxed">Drop off your documents in person at any of our high-security regional centers.</p>
               <div className="space-y-4">
                 {[
-                  { name: 'Headquarters - Dubai', loc: 'Business Bay, Tower A, Level 42', active: true },
-                  { name: 'London Regional Office', loc: 'Canary Wharf, Financial District', active: false },
-                  { name: 'Mumbai Operations Center', loc: 'BKC, Signature Towers, Suite 102', active: false },
+                  { name: 'New Delhi', loc: 'G92-Pratap Complex,Munirka', active: true }
                 ].map((office) => (
                   <div 
                     key={office.name} 
@@ -210,11 +208,14 @@ export default function Home() {
               </div>
             </div>
             <div className="h-[400px] rounded-2xl overflow-hidden border border-outline-variant relative group">
-              <img 
-                className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500" 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBihzrgW_bYiYMlnejGJpqvenjKKwz4idzZGyImgFulUTMGyb5Lo7jvyI1VThfb3tOcvP5UmBsjARu4DK_09WPSQ_p2cn8_zQUIq3jrhq9io1KIhVtvDSZHHSkZyu9G4QiKQHdYWd6ZydnSe5I16xah6vZvNwbTRXNbYMMxt81n76RDPd49rfdbhx9nbGARf5muBEDCuDhF8kVH5O5BUKgj_w-p5axSlaJPddJZCSyXyzrr-H-5VWfy__paa7vnDbx0FOg6iapsOGU" 
-                alt="Map Background" 
-              />
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d575.7295456643667!2d77.1736562198987!3d28.55651105037589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1d96799f59a5%3A0x8d324bce74a6a211!2sPratap%20Complex!5e0!3m2!1sen!2sin!4v1779343605526!5m2!1sen!2sin"
+                width="600"
+                height="450"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade">
+                </iframe>
               <div className="absolute inset-0 pointer-events-none border-[12px] border-white/20"></div>
             </div>
           </div>
