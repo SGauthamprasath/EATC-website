@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
+import FallbackImage from '../components/FallbackImage';
 
 export default function Home() {
   return (
@@ -34,9 +35,9 @@ export default function Home() {
             animate={{ opacity: 1, scale: 1 }}
             className="relative"
           >
-            <img 
-              className="rounded-2xl w-full h-[500px] object-cover border border-outline-variant shadow-lg" 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEg4YnSuYDQOCmHGYoh1jwLW9ZcdYlEFPXectkkXz_kTtVwz-Ux8xknbLD9Tm_UZZqn5CqxkN7yeYFX6nSEzUBzhXUbvwqqCFAdDS04xMI-c7VS4C8ymcvGCY_xXttESUzW-qiPld0BPL1K3vsqlkb_WoRZz3oqXCYemRQecUs-ex1LkZWNvAFGKj_kUZz6EuQkRuDMPnUrhBA87Hm-PfF0DmkSVs4EfwgakkPIOyMm6d8P_t6hmW7yu_6QX26nsR1lkZ_iiD3Wvc" 
+            <FallbackImage
+              className="rounded-2xl w-full h-[500px] object-cover border border-outline-variant shadow-lg"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEg4YnSuYDQOCmHGYoh1jwLW9ZcdYlEFPXectkkXz_kTtVwz-Ux8xknbLD9Tm_UZZqn5CqxkN7yeYFX6nSEzUBzhXUbvwqqCFAdDS04xMI-c7VS4C8ymcvGCY_xXttESUzW-qiPld0BPL1K3vsqlkb_WoRZz3oqXCYemRQecUs-ex1LkZWNvAFGKj_kUZz6EuQkRuDMPnUrhBA87Hm-PfF0DmkSVs4EfwgakkPIOyMm6d8P_t6hmW7yu_6QX26nsR1lkZ_iiD3Wvc"
               alt="Professional Business Setting"
             />
             {/* Floating status card removed per design update */}
@@ -73,9 +74,9 @@ export default function Home() {
                   </ul>
                 </div>
                 <div className="md:w-1/2 rounded-xl overflow-hidden border border-outline-variant">
-                  <img 
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" 
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeT5eHbFKTTeLSPhzMXCJQanMDSJP59r5emXdG91B4kvQnxQ7UDdffZUAITeF3oNZGmjOJ16itkiSFHchCTz45Tqcm2jKC0B4QkcAbNms7kNu4drkGR4N7j2zCo3ESPJEku8qpuTlwjESc7EZhB1_OQ4hpqXpCxeDcjF-Iuo32qiGjpYdJWcNOIK00pJQR1qF1lV9p7jZdK1dMxOLowbVMe91ZLmpxKJ7i6xVLqGpiFHH2wSS2H8F9Ye-m7UGvhYpelYQs6qdIzMs" 
+                  <FallbackImage
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeT5eHbFKTTeLSPhzMXCJQanMDSJP59r5emXdG91B4kvQnxQ7UDdffZUAITeF3oNZGmjOJ16itkiSFHchCTz45Tqcm2jKC0B4QkcAbNms7kNu4drkGR4N7j2zCo3ESPJEku8qpuTlwjESc7EZhB1_OQ4hpqXpCxeDcjF-Iuo32qiGjpYdJWcNOIK00pJQR1qF1lV9p7jZdK1dMxOLowbVMe91ZLmpxKJ7i6xVLqGpiFHH2wSS2H8F9Ye-m7UGvhYpelYQs6qdIzMs"
                     alt="Official Seal"
                   />
                 </div>
@@ -90,17 +91,17 @@ export default function Home() {
                   Urgent requirements? Our fast-track channel ensures your documents are processed within 48-72 hours.
                 </p>
               </div>
-              <Link to="/detail" className="mt-8 flex items-center gap-2 text-on-primary-container text-sm font-bold hover:underline">
+              <div className="mt-8 flex items-center gap-2 text-on-primary-container text-sm font-bold opacity-80 cursor-default">
                 Learn about Priority Service
                 <span className="material-symbols-outlined text-base">arrow_outward</span>
-              </Link>
+              </div>
             </div>
 
             <div className="bg-white p-8 rounded-2xl border border-outline-variant hover:border-primary transition-all group overflow-hidden flex flex-col">
               <div className="h-40 rounded-xl overflow-hidden mb-6 border border-outline-variant relative">
-                <img 
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" 
-                  src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop" 
+                <FallbackImage
+                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                  src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop"
                   alt="Embassy Office"
                 />
               </div>
@@ -114,9 +115,9 @@ export default function Home() {
 
             <div className="bg-white p-8 rounded-2xl border border-outline-variant hover:border-primary transition-all group overflow-hidden flex flex-col">
               <div className="h-40 rounded-xl overflow-hidden mb-6 border border-outline-variant relative">
-                <img 
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" 
-                  src="https://images.unsplash.com/photo-1589330694653-9ecf79401f11?q=80&w=1974&auto=format&fit=crop" 
+                <FallbackImage
+                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                  src="https://images.unsplash.com/photo-1589330694653-9ecf79401f11?q=80&w=1974&auto=format&fit=crop"
                   alt="Official Documents"
                 />
               </div>
@@ -130,9 +131,9 @@ export default function Home() {
 
             <div className="bg-white p-8 rounded-2xl border border-outline-variant hover:border-primary transition-all group overflow-hidden flex flex-col">
               <div className="h-40 rounded-xl overflow-hidden mb-6 border border-outline-variant relative">
-                <img 
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" 
-                  src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2069&auto=format&fit=crop" 
+                <FallbackImage
+                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                  src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2069&auto=format&fit=crop"
                   alt="Global Support"
                 />
               </div>

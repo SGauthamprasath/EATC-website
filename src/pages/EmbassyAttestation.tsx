@@ -1,7 +1,6 @@
 import { motion } from 'motion/react';
-import { desc } from 'motion/react-client';
-import { title } from 'process';
 import { Link } from 'react-router-dom';
+import FallbackImage from '../components/FallbackImage';
 
 export default function EmbassyAttestation() {
   const embassies = [
@@ -57,9 +56,9 @@ export default function EmbassyAttestation() {
       {/* Hero Section (enhanced) */}
       <section className="relative h-[600px] flex items-center overflow-hidden bg-pattern">
         <div className="absolute inset-0 z-0">
-          <img 
-            className="w-full h-full object-cover grayscale opacity-30" 
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzkcIszeZ9xWItQ2-USAtmDyShMNKtG6M_ctcRplsz7Zh_TwONcVWXIpnykJtZGIs8m_eYi4ErLgdTsv0q6xxROpPRNJfJqFFvu6Hn0ksNXuPhUJHfLC13i8RTm_Pla84H00CA9ewmOcnd78ucnEfquPzWI4H7JORUyy_7UZxbkS7TOgUanK4UoNWkEe1T8j_6ukKPN79-P-h_r433---pP74wZxSoVwBw0YsvrWfJf1D3BFX92xHFlbOXT78FPfWSU4Kcdn0o4bQ" 
+          <FallbackImage
+            className="w-full h-full object-cover grayscale opacity-30"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzkcIszeZ9xWItQ2-USAtmDyShMNKtG6M_ctcRplsz7Zh_TwONcVWXIpnykJtZGIs8m_eYi4ErLgdTsv0q6xxROpPRNJfJqFFvu6Hn0ksNXuPhUJHfLC13i8RTm_Pla84H00CA9ewmOcnd78ucnEfquPzWI4H7JORUyy_7UZxbkS7TOgUanK4UoNWkEe1T8j_6ukKPN79-P-h_r433---pP74wZxSoVwBw0YsvrWfJf1D3BFX92xHFlbOXT78FPfWSU4Kcdn0o4bQ"
             alt="Corporate Interior"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-white to-transparent"></div>
@@ -83,7 +82,7 @@ export default function EmbassyAttestation() {
       <section className="py-20 bg-surface-bright">
         <div className="max-w-[1200px] mx-auto px-10 grid md:grid-cols-2 gap-12 items-center">
           <motion.div initial={{ opacity: 0, x: -12 }} animate={{ opacity: 1, x: 0 }} className="rounded-2xl overflow-hidden border border-outline-variant shadow-sm h-[420px]">
-            <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2070&auto=format&fit=crop" alt="Embassy coordination" className="w-full h-full object-cover" />
+            <FallbackImage src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2070&auto=format&fit=crop" alt="Embassy coordination" className="w-full h-full object-cover" />
           </motion.div>
 
           <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}>
@@ -94,7 +93,7 @@ export default function EmbassyAttestation() {
               <li className="flex items-start gap-3 text-sm"><span className="material-symbols-outlined text-primary">check_circle</span> Fast-track options for urgent consular windows</li>
               <li className="flex items-start gap-3 text-sm"><span className="material-symbols-outlined text-primary">check_circle</span> Door-to-door courier and secure handling</li>
             </ul>
-            <Link to="/contact" className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-xl font-bold hover:opacity-90">Get Assistance <span className="material-symbols-outlined">arrow_forward</span></Link>
+            <Link to="/contact" className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition-opacity">Get Assistance <span className="material-symbols-outlined">arrow_forward</span></Link>
           </motion.div>
         </div>
       </section>
@@ -110,9 +109,9 @@ export default function EmbassyAttestation() {
               className="bg-white border border-outline-variant rounded-3xl overflow-hidden hover:border-primary hover:shadow-xl transition-all flex flex-col group"
             >
               <div className="h-48 overflow-hidden">
-                <img 
-                  src={item.img} 
-                  alt={item.title} 
+                <FallbackImage
+                  src={item.img}
+                  alt={item.title}
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
                 />
               </div>
@@ -122,10 +121,6 @@ export default function EmbassyAttestation() {
                   <h3 className="text-xl font-display font-bold text-primary">{item.title}</h3>
                 </div>
                 <p className="text-sm text-on-surface-variant leading-relaxed mb-8 flex-grow">{item.desc}</p>
-                <Link to="/detail" className="text-sm font-bold text-primary flex items-center gap-2 group-hover:underline">
-                  Inquire Now
-                  <span className="material-symbols-outlined text-base">arrow_forward</span>
-                </Link>
               </div>
             </motion.div>
           ))}

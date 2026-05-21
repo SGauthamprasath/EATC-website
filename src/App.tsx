@@ -10,8 +10,6 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
-import Directory from './pages/Directory';
-import Detail from './pages/Detail';
 import Contact from './pages/Contact';
 import EmbassyAttestation from './pages/EmbassyAttestation';
 import Attestation from './pages/Attestation';
@@ -33,11 +31,6 @@ function AnimatedRoutes() {
             <About />
           </PageTransition>
         } />
-        <Route path="/directory" element={
-          <PageTransition>
-            <Directory />
-          </PageTransition>
-        } />
         <Route path="/embassy-attestation" element={
           <PageTransition>
             <EmbassyAttestation />
@@ -53,11 +46,7 @@ function AnimatedRoutes() {
             <OtherServices />
           </PageTransition>
         } />
-        <Route path="/detail" element={
-          <PageTransition>
-            <Detail />
-          </PageTransition>
-        } />
+        {/* Detail page removed per request */}
         <Route path="/contact" element={
           <PageTransition>
             <Contact />

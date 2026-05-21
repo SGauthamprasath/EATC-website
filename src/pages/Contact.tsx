@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import FallbackImage from '../components/FallbackImage';
 
 export default function Contact() {
   return (
@@ -6,9 +7,9 @@ export default function Contact() {
       {/* Header */}
       <section className="relative h-[600px] flex items-center overflow-hidden bg-pattern">
         <div className="absolute inset-0 z-0">
-          <img 
-            className="w-full h-full object-cover grayscale opacity-30" 
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzkcIszeZ9xWItQ2-USAtmDyShMNKtG6M_ctcRplsz7Zh_TwONcVWXIpnykJtZGIs8m_eYi4ErLgdTsv0q6xxROpPRNJfJqFFvu6Hn0ksNXuPhUJHfLC13i8RTm_Pla84H00CA9ewmOcnd78ucnEfquPzWI4H7JORUyy_7UZxbkS7TOgUanK4UoNWkEe1T8j_6ukKPN79-P-h_r433---pP74wZxSoVwBw0YsvrWfJf1D3BFX92xHFlbOXT78FPfWSU4Kcdn0o4bQ" 
+          <FallbackImage
+            className="w-full h-full object-cover grayscale opacity-30"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzkcIszeZ9xWItQ2-USAtmDyShMNKtG6M_ctcRplsz7Zh_TwONcVWXIpnykJtZGIs8m_eYi4ErLgdTsv0q6xxROpPRNJfJqFFvu6Hn0ksNXuPhUJHfLC13i8RTm_Pla84H00CA9ewmOcnd78ucnEfquPzWI4H7JORUyy_7UZxbkS7TOgUanK4UoNWkEe1T8j_6ukKPN79-P-h_r433---pP74wZxSoVwBw0YsvrWfJf1D3BFX92xHFlbOXT78FPfWSU4Kcdn0o4bQ"
             alt="Corporate Interior"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-white to-transparent"></div>
@@ -118,10 +119,10 @@ export default function Contact() {
 
       {/* Map */}
       <section className="w-full h-[500px] relative mt-16 overflow-hidden">
-        <img 
-          className="w-full h-full object-cover grayscale" 
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxiawHM815F39lWLFxZFKCgYo8p8QHsJCNCSA7BXOMNmkiT0SXYnn_BA3liN-aV1qgejnecqw06TC9SkUfJ9sbJ_CIqFxSS0B-lGOmBTqIspVDXubI31YLQeu8V3fgaXUSbeIwEij7XVHCmQh-Hfj4XhVB4lIZsNDcuZ1X32BHRWV6vj4FAA74mk73D6e1j0GSUzoJMmhUTiS5fbH0LEbZTyKOTmpBNuxGaIdm689fg9DRJGD_ywjlpOqkeSqEwPYi6hpgolHoIXA" 
-          alt="Office Map" 
+        <FallbackImage
+          className="w-full h-full object-cover grayscale"
+          src="https://picsum.photos/1600/900"
+          alt="Office Map"
         />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
           <div className="bg-white p-6 rounded-2xl shadow-2xl border border-outline-variant flex items-center gap-6 min-w-[320px]">
