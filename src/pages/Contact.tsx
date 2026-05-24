@@ -1,7 +1,44 @@
+import { useState } from 'react';
 import { motion } from 'motion/react';
 import FallbackImage from '../components/FallbackImage';
 
 export default function Contact() {
+  const recipientEmail = 'Attestation2400@gmail.com';
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    serviceInterest: 'Document Attestation',
+    message: '',
+  });
+
+  const handleChange = (
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
+    const { name, value } = event.target;
+    setFormData((current) => ({ ...current, [name]: value }));
+  };
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    const subject = encodeURIComponent(
+      `Contact form inquiry - ${formData.firstName || 'New'} ${formData.lastName || 'customer'}`
+    );
+    const body = encodeURIComponent(
+      [
+        `First Name: ${formData.firstName}`,
+        `Last Name: ${formData.lastName}`,
+        `Email: ${formData.email}`,
+        `Service Interest: ${formData.serviceInterest}`,
+        '',
+        formData.message,
+      ].join('\n')
+    );
+
+    window.location.href = `mailto:${recipientEmail}?subject=${subject}&body=${body}`;
+  };
+
   return (
     <main className="min-h-screen">
       {/* Header */}
@@ -52,8 +89,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="text-lg font-display font-bold text-primary">Email Inquiries</h3>
-                  <p className="text-sm text-on-surface-variant font-medium mt-1">support@vericert.com</p>
-                  <p className="text-sm text-on-surface-variant font-medium">legal@vericert.com</p>
+                  <p className="text-sm text-on-surface-variant font-medium mt-1">Attestation2400@gmail.com</p>
                 </div>
               </div>
             </div>
@@ -77,24 +113,50 @@ export default function Contact() {
 
           <div className="md:col-span-7 bg-white border border-outline-variant rounded-2xl p-10 shadow-sm">
             <h2 className="text-2xl font-display font-bold text-primary mb-8">Get in Touch</h2>
-            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-xs font-bold text-primary uppercase tracking-wider">First Name</label>
-                  <input className="w-full bg-surface border border-outline-variant rounded-lg px-4 py-3 focus:border-primary focus:ring-0 transition-all outline-none" placeholder="John" type="text"/>
+                  <input
+                    className="w-full bg-surface border border-outline-variant rounded-lg px-4 py-3 focus:border-primary focus:ring-0 transition-all outline-none"
+                    placeholder="John"
+                    type="text"
+                    name="firstName"
+                    value={formData.firstName}
+                    onChange={handleChange}
+                  />
                 </div>
                 <div className="space-y-2">
                   <label className="text-xs font-bold text-primary uppercase tracking-wider">Last Name</label>
-                  <input className="w-full bg-surface border border-outline-variant rounded-lg px-4 py-3 focus:border-primary focus:ring-0 transition-all outline-none" placeholder="Doe" type="text"/>
+                  <input
+                    className="w-full bg-surface border border-outline-variant rounded-lg px-4 py-3 focus:border-primary focus:ring-0 transition-all outline-none"
+                    placeholder="Doe"
+                    type="text"
+                    name="lastName"
+                    value={formData.lastName}
+                    onChange={handleChange}
+                  />
                 </div>
               </div>
               <div className="space-y-2">
                 <label className="text-xs font-bold text-primary uppercase tracking-wider">Email Address</label>
-                <input className="w-full bg-surface border border-outline-variant rounded-lg px-4 py-3 focus:border-primary focus:ring-0 transition-all outline-none" placeholder="j.doe@company.com" type="email"/>
+                <input
+                  className="w-full bg-surface border border-outline-variant rounded-lg px-4 py-3 focus:border-primary focus:ring-0 transition-all outline-none"
+                  placeholder="j.doe@company.com"
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                />
               </div>
               <div className="space-y-2">
                 <label className="text-xs font-bold text-primary uppercase tracking-wider">Service Interest</label>
-                <select className="w-full bg-surface border border-outline-variant rounded-lg px-4 py-3 focus:border-primary focus:ring-0 transition-all outline-none appearance-none">
+                <select
+                  className="w-full bg-surface border border-outline-variant rounded-lg px-4 py-3 focus:border-primary focus:ring-0 transition-all outline-none appearance-none"
+                  name="serviceInterest"
+                  value={formData.serviceInterest}
+                  onChange={handleChange}
+                >
                   <option>Document Attestation</option>
                   <option>Embassy Legalization</option>
                   <option>Corporate Verification</option>
@@ -103,9 +165,16 @@ export default function Contact() {
               </div>
               <div className="space-y-2">
                 <label className="text-xs font-bold text-primary uppercase tracking-wider">Message</label>
-                <textarea className="w-full bg-surface border border-outline-variant rounded-lg px-4 py-3 focus:border-primary focus:ring-0 transition-all outline-none" placeholder="Tell us how we can help..." rows={4}></textarea>
+                <textarea
+                  className="w-full bg-surface border border-outline-variant rounded-lg px-4 py-3 focus:border-primary focus:ring-0 transition-all outline-none"
+                  placeholder="Tell us how we can help..."
+                  rows={4}
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                ></textarea>
               </div>
-              <button className="w-full bg-primary text-white font-bold py-4 rounded-xl hover:opacity-90 transition-opacity flex items-center justify-center gap-2 group">
+              <button className="w-full bg-primary text-white font-bold py-4 rounded-xl hover:opacity-90 transition-opacity flex items-center justify-center gap-2 group" type="submit">
                 Send Message
                 <span className="material-symbols-outlined text-base group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">send</span>
               </button>
