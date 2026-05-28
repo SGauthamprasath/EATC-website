@@ -1,43 +1,42 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
-import FallbackImage from '../components/FallbackImage';
 
 export default function OtherServices() {
   const services = [
     { 
       title: 'UAE PCC', 
       desc: 'Police Clearance Certificate for United Arab Emirates visas and employment.',
-      img: 'https://images.unsplash.com/photo-1577416416181-f284239bd4d0?q=80&w=2070&auto=format&fit=crop'
+      img: '/assets/More/UAE.avif'
     },
     { 
       title: 'Oman PCC', 
       desc: 'Official PCC procurement for the Sultanate of Oman residency requirements.',
-      img: 'https://images.unsplash.com/photo-1549443165-1756b7342783?q=80&w=2070&auto=format&fit=crop'
+      img: '/assets/More/oman.jpeg'
     },
     { 
       title: 'PCC Attestation', 
       desc: 'Legalization of local police clearance for global immigration use.',
-      img: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2070&auto=format&fit=crop'
+      img: '/assets/More/PCC.avif'
     },
     { 
       title: 'Visa Stamping', 
       desc: 'Assistance with visa endorsements and official government stamping.',
-      img: 'https://images.unsplash.com/photo-1544027993-37dbfe43562a?q=80&w=2070&auto=format&fit=crop'
+      img: '/assets/More/Visa.avif'
     },
     { 
       title: 'Translations', 
       desc: 'Certified legal translations in 50+ languages by accredited professionals.',
-      img: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?q=80&w=2066&auto=format&fit=crop'
+      img: '/assets/More/Translations.avif'
     },
     { 
       title: 'WES/IQAS Verification', 
       desc: 'WES, IQAS, and ICAS verification for North American educational equivalency.',
-      img: 'https://images.unsplash.com/photo-1523050335102-c3251c17b384?q=80&w=2070&auto=format&fit=crop'
+      img: '/assets/More/WES.jpeg'
     },
     { 
       title: 'Notary Services', 
       desc: 'Public notary and state-level verification for legal validity.',
-      img: 'https://images.unsplash.com/photo-1589216532372-1c2a367900d9?q=80&w=2070&auto=format&fit=crop'
+      img: '/assets/More/Notary.avif'
     }
   ];
 
@@ -58,7 +57,7 @@ export default function OtherServices() {
       <section className="py-20 bg-surface-bright">
         <div className="max-w-[1200px] mx-auto px-10 grid md:grid-cols-2 gap-12 items-center">
           <motion.div initial={{ opacity: 0, x: -12 }} animate={{ opacity: 1, x: 0 }} className="rounded-2xl overflow-hidden border border-outline-variant shadow-sm h-[420px]">
-            <FallbackImage src="https://images.unsplash.com/photo-1528747045269-390fe33c19d2?q=80&w=2070&auto=format&fit=crop" alt="Support services" className="w-full h-full object-cover" />
+            <img src="/assets/More/support.jpeg" alt="Support services" className="w-full h-full object-cover" />
           </motion.div>
 
           <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}>
@@ -85,7 +84,7 @@ export default function OtherServices() {
               className="bg-white border border-outline-variant rounded-3xl overflow-hidden hover:border-primary hover:shadow-xl transition-all flex flex-col group"
             >
               <div className="h-48 overflow-hidden">
-                <FallbackImage
+                <img
                   src={service.img}
                   alt={service.title}
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
