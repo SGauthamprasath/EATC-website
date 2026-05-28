@@ -21,7 +21,7 @@ export default function Home() {
               Legal-Grade Document Attestation You Can Trust.
             </h1>
             <p className="text-lg text-on-surface-variant mb-10 max-w-lg leading-relaxed">
-              VeriCert provides seamless, secure, and fast embassy and educational attestation services globally. We handle the complexity, you get peace of mind.
+              EATC Group provides seamless, secure, and fast embassy and educational attestation services globally. We handle the complexity, you get peace of mind.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <button className="bg-white border border-outline-variant text-primary px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-surface-container transition-colors">
@@ -148,12 +148,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* The VeriCert Standard */}
+      {/* The EATC Group Standard */}
       <section className="py-20 bg-surface-container">
         <div className="max-w-[1200px] mx-auto px-10">
           <div className="flex flex-col md:flex-row gap-12 items-center">
             <div className="md:w-1/3">
-              <h2 className="text-4xl font-display font-bold text-primary mb-4 leading-tight">The VeriCert Standard</h2>
+              <h2 className="text-4xl font-display font-bold text-primary mb-4 leading-tight">The EATC Group Standard</h2>
               <p className="text-on-surface-variant mb-8">Why thousands of professionals and businesses choose us for their most sensitive documents.</p>
               <div className="p-6 rounded-2xl bg-white border border-outline-variant inline-flex items-center gap-4">
                 <div className="text-3xl font-bold text-primary">15k+</div>
