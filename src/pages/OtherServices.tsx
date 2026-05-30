@@ -45,7 +45,7 @@ export default function OtherServices() {
       {/* Hero Section */}
       <section className="relative h-[600px] flex items-center overflow-hidden bg-pattern">
         <div className="absolute inset-0 z-0">
-          <FallbackImage
+          <img
             className="w-full h-full object-cover grayscale opacity-30"
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzkcIszeZ9xWItQ2-USAtmDyShMNKtG6M_ctcRplsz7Zh_TwONcVWXIpnykJtZGIs8m_eYi4ErLgdTsv0q6xxROpPRNJfJqFFvu6Hn0ksNXuPhUJHfLC13i8RTm_Pla84H00CA9ewmOcnd78ucnEfquPzWI4H7JORUyy_7UZxbkS7TOgUanK4UoNWkEe1T8j_6ukKPN79-P-h_r433---pP74wZxSoVwBw0YsvrWfJf1D3BFX92xHFlbOXT78FPfWSU4Kcdn0o4bQ"
             alt="Corporate Interior"
