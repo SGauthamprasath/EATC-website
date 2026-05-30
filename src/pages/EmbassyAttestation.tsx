@@ -1,53 +1,52 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
-import FallbackImage from '../components/FallbackImage';
 
 export default function EmbassyAttestation() {
   const embassies = [
     { 
       title: 'UAE Attestation', 
       desc: 'Legalization for Dubai, Abu Dhabi, and all northern emirates.',
-      img: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=2070&auto=format&fit=crop'
+      img: '/assets/EmbassyAttestation/UAE.avif'
     },
     { 
       title: 'Saudi Attestation', 
       desc: 'MOFA and Culture attestation for work and residence visas.',
-      img: 'https://images.unsplash.com/photo-1586724230006-2adca53538c2?q=80&w=2070&auto=format&fit=crop'
+      img: '/assets/EmbassyAttestation/saudi.jpg'
     },
     { 
       title: 'Qatar Attestation', 
       desc: 'Official verification for Ministry of Interior requirements in Doha.',
-      img: 'https://images.unsplash.com/photo-1594993872205-096d29944ac8?q=80&w=2072&auto=format&fit=crop'
+      img: '/assets/EmbassyAttestation/qatar.jpeg'
     },
     { 
       title: 'Oman Attestation', 
       desc: 'Wisma Putra and High Commission legalization services.',
-      img: 'https://images.unsplash.com/photo-1528607929212-2636ec44253e?q=80&w=2038&auto=format&fit=crop'
+      img: '/assets/EmbassyAttestation/oman.jpeg'
     },
     { 
       title: 'Kuwait Attestation', 
       desc: 'Security and educational verification for State of Kuwait.',
-      img: 'https://images.unsplash.com/photo-1518115664171-ec5af7d8f58b?q=80&w=2070&auto=format&fit=crop'
+      img: '/assets/EmbassyAttestation/kuwait.jpeg'
     },
     { 
       title: 'Bahrain Attestation', 
       desc: 'Ministry of Foreign Affairs seals for Kingdom of Bahrain.',
-      img: 'https://images.unsplash.com/photo-1548013146-72479768bbaa?q=80&w=2073&auto=format&fit=crop'
+      img: '/assets/EmbassyAttestation/Bahrain%20.jpeg'
     },
     {
       title: 'USA Attestation',
       desc: 'State Department and embassy legalization for US-bound documents.',
-      img: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070&auto=format&fit=crop'
+      img: '/assets/EmbassyAttestation/USA.jpeg'
     },
     {
       title: 'UK Attestation',
       desc: 'Foreign and Commonwealth Office attestation for UK visa applications.',
-      img: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2070&auto=format&fit=crop'
+      img: '/assets/EmbassyAttestation/UK.jpg'
     },
     { 
       title: 'Other Attestation', 
       desc: 'Global embassy coordination for 120+ other countries.',
-      img: 'https://images.unsplash.com/photo-1526772662000-3f88f10405ff?q=80&w=2034&auto=format&fit=crop'
+      img: '/assets/EmbassyAttestation/OTHER.avif'
     }
   ];
 
@@ -56,24 +55,26 @@ export default function EmbassyAttestation() {
       {/* Hero Section (enhanced) */}
       <section className="relative h-[600px] flex items-center overflow-hidden bg-pattern">
         <div className="absolute inset-0 z-0">
-          <FallbackImage
+          <img
             className="w-full h-full object-cover grayscale opacity-30"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzkcIszeZ9xWItQ2-USAtmDyShMNKtG6M_ctcRplsz7Zh_TwONcVWXIpnykJtZGIs8m_eYi4ErLgdTsv0q6xxROpPRNJfJqFFvu6Hn0ksNXuPhUJHfLC13i8RTm_Pla84H00CA9ewmOcnd78ucnEfquPzWI4H7JORUyy_7UZxbkS7TOgUanK4UoNWkEe1T8j_6ukKPN79-P-h_r433---pP74wZxSoVwBw0YsvrWfJf1D3BFX92xHFlbOXT78FPfWSU4Kcdn0o4bQ"
+            src="/assets/EmbassyAttestation/hero-bg.png"
             alt="Corporate Interior"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-white to-transparent"></div>
         </div>
         <div className="relative z-10 max-w-[1200px] mx-auto px-10 w-full">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="max-w-2xl"
-          >
-            <h1 className="text-5xl font-display font-bold text-primary mb-8">Embassy Attestation Services</h1>
-            <p className="text-lg text-on-surface-variant leading-relaxed">
-              Direct coordination with foreign embassies and consulates for visa, residency, and immigration requirements globally. We manage protocols, translations and official liaison so you don't have to.
-            </p>
-          </motion.div>
+          <div className="grid md:grid-cols-2 gap-10 items-center">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="max-w-2xl"
+            >
+              <h1 className="text-5xl font-display font-bold text-primary mb-8">Embassy Attestation Services</h1>
+              <p className="text-lg text-on-surface-variant leading-relaxed">
+                Direct coordination with foreign embassies and consulates for visa, residency, and immigration requirements globally. We manage protocols, translations and official liaison so you don't have to.
+              </p>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -82,7 +83,7 @@ export default function EmbassyAttestation() {
       <section className="py-20 bg-surface-bright">
         <div className="max-w-[1200px] mx-auto px-10 grid md:grid-cols-2 gap-12 items-center">
           <motion.div initial={{ opacity: 0, x: -12 }} animate={{ opacity: 1, x: 0 }} className="rounded-2xl overflow-hidden border border-outline-variant shadow-sm h-[420px]">
-            <FallbackImage src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2070&auto=format&fit=crop" alt="Embassy coordination" className="w-full h-full object-cover" />
+            <img src="/assets/EmbassyAttestation/coat-embassy.avif" alt="Embassy coat of arms" className="w-full h-full object-cover" />
           </motion.div>
 
           <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}>
@@ -109,7 +110,7 @@ export default function EmbassyAttestation() {
               className="bg-white border border-outline-variant rounded-3xl overflow-hidden hover:border-primary hover:shadow-xl transition-all flex flex-col group"
             >
               <div className="h-48 overflow-hidden">
-                <FallbackImage
+                <img
                   src={item.img}
                   alt={item.title}
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"

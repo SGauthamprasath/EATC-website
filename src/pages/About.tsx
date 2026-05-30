@@ -1,5 +1,4 @@
 import { motion } from 'motion/react';
-import FallbackImage from '../components/FallbackImage';
 
 export default function About() {
   return (
@@ -7,9 +6,9 @@ export default function About() {
       {/* Hero Section */}
       <section className="relative h-[600px] flex items-center overflow-hidden bg-pattern">
         <div className="absolute inset-0 z-0">
-          <FallbackImage
+          <img
             className="w-full h-full object-cover grayscale opacity-30"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzkcIszeZ9xWItQ2-USAtmDyShMNKtG6M_ctcRplsz7Zh_TwONcVWXIpnykJtZGIs8m_eYi4ErLgdTsv0q6xxROpPRNJfJqFFvu6Hn0ksNXuPhUJHfLC13i8RTm_Pla84H00CA9ewmOcnd78ucnEfquPzWI4H7JORUyy_7UZxbkS7TOgUanK4UoNWkEe1T8j_6ukKPN79-P-h_r433---pP74wZxSoVwBw0YsvrWfJf1D3BFX92xHFlbOXT78FPfWSU4Kcdn0o4bQ"
+            src="/assets/About/hero-bg.png"
             alt="Corporate Interior"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-white to-transparent"></div>
@@ -46,9 +45,9 @@ export default function About() {
             </div>
             <div className="relative">
               <div className="aspect-square bg-surface-container rounded-2xl overflow-hidden border border-outline-variant shadow-sm transition-transform hover:scale-[1.02]">
-                <FallbackImage
+                <img
                   className="w-full h-full object-cover"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3IZChjMp71wkPtyS02FAsN2lVd6EZUvFxc1wZRTGreR9AW-nSs0UTgmw7Wq6MJ79EGWt_paynM0waGxEETQXruCMyPByH9D3vK9CY5ei_OlH2rLRFZq1JZkArg6Wtrr7-1_WzRPm1ezveTJSX-I_ULcDh4aeO5XLXkZj6ULsrfHlFYeMHrB_ipV4pQYCzxQpZTNMUa_CGI04X1zfS_u_5669hfHVskJPAQzhTYrS6bdzU0mli3QWrtToNgaIMJW_WuIeZjkQACNU"
+                  src="/assets/About/books.png"
                   alt="Legal Library"
                 />
               </div>

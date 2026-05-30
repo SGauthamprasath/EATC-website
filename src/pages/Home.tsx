@@ -1,6 +1,5 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
-import FallbackImage from '../components/FallbackImage';
 
 export default function Home() {
   return (
@@ -35,9 +34,9 @@ export default function Home() {
             animate={{ opacity: 1, scale: 1 }}
             className="relative"
           >
-            <FallbackImage
+            <img
               className="rounded-2xl w-full h-[500px] object-cover border border-outline-variant shadow-lg"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEg4YnSuYDQOCmHGYoh1jwLW9ZcdYlEFPXectkkXz_kTtVwz-Ux8xknbLD9Tm_UZZqn5CqxkN7yeYFX6nSEzUBzhXUbvwqqCFAdDS04xMI-c7VS4C8ymcvGCY_xXttESUzW-qiPld0BPL1K3vsqlkb_WoRZz3oqXCYemRQecUs-ex1LkZWNvAFGKj_kUZz6EuQkRuDMPnUrhBA87Hm-PfF0DmkSVs4EfwgakkPIOyMm6d8P_t6hmW7yu_6QX26nsR1lkZ_iiD3Wvc"
+              src="/assets/Home/unnamed.png"
               alt="Professional Business Setting"
             />
             {/* Floating status card removed per design update */}
@@ -74,9 +73,9 @@ export default function Home() {
                   </ul>
                 </div>
                 <div className="md:w-1/2 rounded-xl overflow-hidden border border-outline-variant">
-                  <FallbackImage
+                  <img
                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeT5eHbFKTTeLSPhzMXCJQanMDSJP59r5emXdG91B4kvQnxQ7UDdffZUAITeF3oNZGmjOJ16itkiSFHchCTz45Tqcm2jKC0B4QkcAbNms7kNu4drkGR4N7j2zCo3ESPJEku8qpuTlwjESc7EZhB1_OQ4hpqXpCxeDcjF-Iuo32qiGjpYdJWcNOIK00pJQR1qF1lV9p7jZdK1dMxOLowbVMe91ZLmpxKJ7i6xVLqGpiFHH2wSS2H8F9Ye-m7UGvhYpelYQs6qdIzMs"
+                    src="/assets/Home/unnamed%20(1).png"
                     alt="Official Seal"
                   />
                 </div>
@@ -99,9 +98,9 @@ export default function Home() {
 
             <div className="bg-white p-8 rounded-2xl border border-outline-variant hover:border-primary transition-all group overflow-hidden flex flex-col">
               <div className="h-40 rounded-xl overflow-hidden mb-6 border border-outline-variant relative">
-                <FallbackImage
+                <img
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                  src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop"
+                  src="/assets/Home/images.jpeg"
                   alt="Embassy Office"
                 />
               </div>
@@ -115,9 +114,9 @@ export default function Home() {
 
             <div className="bg-white p-8 rounded-2xl border border-outline-variant hover:border-primary transition-all group overflow-hidden flex flex-col">
               <div className="h-40 rounded-xl overflow-hidden mb-6 border border-outline-variant relative">
-                <FallbackImage
+                <img
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                  src="https://images.unsplash.com/photo-1589330694653-9ecf79401f11?q=80&w=1974&auto=format&fit=crop"
+                  src="/assets/Home/photo-1517048676732-d65bc937f952.avif"
                   alt="Official Documents"
                 />
               </div>
@@ -131,9 +130,9 @@ export default function Home() {
 
             <div className="bg-white p-8 rounded-2xl border border-outline-variant hover:border-primary transition-all group overflow-hidden flex flex-col">
               <div className="h-40 rounded-xl overflow-hidden mb-6 border border-outline-variant relative">
-                <FallbackImage
+                <img
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                  src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2069&auto=format&fit=crop"
+                  src="/assets/Home/photo-1521791136064-7986c2920216.avif"
                   alt="Global Support"
                 />
               </div>

@@ -1,5 +1,4 @@
 import { motion } from 'motion/react';
-import FallbackImage from '../components/FallbackImage';
 // import { Link } from 'react-router-dom';
 
 export default function Attestation() {
@@ -8,61 +7,61 @@ export default function Attestation() {
       title: 'Educational Documents',
       desc: 'Degree, Diploma, and certificate verification for global recognition.',
       icon: 'school',
-      img: 'https://images.unsplash.com/photo-1523050335102-c3251c17b384?q=80&w=2070&auto=format&fit=crop'
+      img: '/assets/Attestation/Educational%20Documents.jpeg'
     },
     {
       title: 'Marriage Certificate',
       desc: 'Legalization for spouse visas and global family residency sponsorship.',
       icon: 'family_history',
-      img: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=2069&auto=format&fit=crop'
+      img: '/assets/Attestation/MarriageCertificate.avif'
     },
     {
       title: 'Birth Certificate',
       desc: 'Official verification for child visa processing and citizenship applications.',
       icon: 'child_care',
-      img: 'https://images.unsplash.com/photo-1519689689378-0e8397144189?q=80&w=2070&auto=format&fit=crop'
+      img: '/assets/Attestation/Birth%20Certificate.jpeg'
     },
     {
       title: 'Commercial Documents',
       desc: 'Invoices, COOs, and trade-related documents for international business.',
       icon: 'business_center',
-      img: 'https://images.unsplash.com/photo-1454165833767-027ffea702b8?q=80&w=2070&auto=format&fit=crop'
+      img: '/assets/Attestation/Commercial%20Documents.jpeg'
     },
     {
       title: 'Power of Attorney',
       desc: 'Legal empowerment documents for business and property representation overseas.',
       icon: 'gavel',
-      img: 'https://images.unsplash.com/photo-1589216532372-1c2a367900d9?q=80&w=2070&auto=format&fit=crop'
+      img: '/assets/Attestation/Power%20of%20Attorney.avif'
     },
     {
       title: 'MEA Attestation',
       desc: 'Ministry of External Affairs verification for national-level legalization.',
       icon: 'verified_user',
-      img: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2069&auto=format&fit=crop'
+      img: '/assets/Attestation/MEA%20Attestation.avif'
     },
     {
       title: 'Apostille Attestation',
       desc: 'Hague Convention standard verification for member countries.',
       icon: 'public',
-      img: 'https://images.unsplash.com/photo-1557568192-2afc83f38bc4?q=80&w=2070&auto=format&fit=crop'
+      img: '/assets/Attestation/Apostille%20Attestation.jpeg'
     },
     {
       title: 'Norka/HRD Services',
       desc: 'State-level HRD and Norka verification for educational documents.',
       icon: 'account_balance',
-      img: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=2069&auto=format&fit=crop'
+      img: '/assets/Attestation/NorkaHRDServices.jpeg'
     },
     {
       title: 'SDM Attestation',
       desc: 'Local SDM and chamber of commerce verification for regional acceptance.',
       icon: 'location_city',
-      img: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070&auto=format&fit=crop'
+      img: '/assets/Attestation/SDMAttestation.jpeg'
     },
     {
       title: 'MOFA Attestation',
       desc: 'State home department verification for internal security clearance.',
       icon: 'home',
-      img: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070&auto=format&fit=crop'
+      img: '/assets/Attestation/MOFAAttestation.jpeg'
     }
   ];
 
@@ -71,9 +70,9 @@ export default function Attestation() {
       {/* Hero Section (enhanced) */}
       <section className="relative h-[600px] flex items-center overflow-hidden bg-pattern">
         <div className="absolute inset-0 z-0">
-          <FallbackImage
+          <img
             className="w-full h-full object-cover grayscale opacity-30"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzkcIszeZ9xWItQ2-USAtmDyShMNKtG6M_ctcRplsz7Zh_TwONcVWXIpnykJtZGIs8m_eYi4ErLgdTsv0q6xxROpPRNJfJqFFvu6Hn0ksNXuPhUJHfLC13i8RTm_Pla84H00CA9ewmOcnd78ucnEfquPzWI4H7JORUyy_7UZxbkS7TOgUanK4UoNWkEe1T8j_6ukKPN79-P-h_r433---pP74wZxSoVwBw0YsvrWfJf1D3BFX92xHFlbOXT78FPfWSU4Kcdn0o4bQ"
+            src="/assets/Attestation/hero-bg.png"
             alt="Corporate Interior"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-white to-transparent"></div>
@@ -97,7 +96,7 @@ export default function Attestation() {
       <section className="py-20 bg-surface-bright">
         <div className="max-w-[1200px] mx-auto px-10 grid md:grid-cols-2 gap-12 items-center">
           <motion.div initial={{ opacity: 0, x: -12 }} animate={{ opacity: 1, x: 0 }} className="rounded-2xl overflow-hidden border border-outline-variant shadow-sm h-[420px]">
-            <FallbackImage src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop" alt="Document attestation" className="w-full h-full object-cover" />
+            <img src="/assets/Attestation/DocumentCare.jpeg" alt="Document attestation" className="w-full h-full object-cover" />
           </motion.div>
 
           <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}>
@@ -124,7 +123,7 @@ export default function Attestation() {
               className="bg-white border border-outline-variant rounded-3xl overflow-hidden hover:border-primary hover:shadow-xl transition-all flex flex-col group"
             >
               <div className="h-48 overflow-hidden">
-                <FallbackImage
+                <img
                   src={item.img}
                   alt={item.title}
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"

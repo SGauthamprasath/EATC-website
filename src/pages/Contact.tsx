@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
-import FallbackImage from '../components/FallbackImage';
 
 export default function Contact() {
   const recipientEmail = 'Attestation2400@gmail.com';
@@ -44,7 +43,7 @@ export default function Contact() {
       {/* Header */}
       <section className="relative h-[600px] flex items-center overflow-hidden bg-pattern">
         <div className="absolute inset-0 z-0">
-          <FallbackImage
+          <img
             className="w-full h-full object-cover grayscale opacity-30"
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzkcIszeZ9xWItQ2-USAtmDyShMNKtG6M_ctcRplsz7Zh_TwONcVWXIpnykJtZGIs8m_eYi4ErLgdTsv0q6xxROpPRNJfJqFFvu6Hn0ksNXuPhUJHfLC13i8RTm_Pla84H00CA9ewmOcnd78ucnEfquPzWI4H7JORUyy_7UZxbkS7TOgUanK4UoNWkEe1T8j_6ukKPN79-P-h_r433---pP74wZxSoVwBw0YsvrWfJf1D3BFX92xHFlbOXT78FPfWSU4Kcdn0o4bQ"
             alt="Corporate Interior"
@@ -188,9 +187,9 @@ export default function Contact() {
 
       {/* Map */}
       <section className="w-full h-[500px] relative mt-16 overflow-hidden">
-        <FallbackImage
+        <img
           className="w-full h-full object-cover grayscale"
-          src="https://picsum.photos/1600/900"
+          src="/assets/Contact/office.jpg"
           alt="Office Map"
         />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
