@@ -1,0 +1,39 @@
+name: Deploy to Hostinger via FTP
+
+on:
+  push:
+    branches:
+      - main   # change to 'master' if that's your default branch
+
+jobs:
+  web-deploy:
+    name: Build and Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build   # Vite outputs to /dist
+
+      - name: Sync files via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./dist/         # Vite's build output folder
+          server-dir: /public_html/  # Hostinger's web root
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
