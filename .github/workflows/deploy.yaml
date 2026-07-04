@@ -32,8 +32,16 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/         # Vite's build output folder
-          server-dir: /public_html/  # Hostinger's web root
+          server-dir: /domains/theeatcgroups.com/public_html/  # confirmed real doc root via whereami.php
           exclude: |
             **/.git*
             **/.git*/**
             **/node_modules/**
+
+      - name: Purge LiteSpeed cache
+        run: |
+          curl -X PURGE https://theeatcgroups.com/ \
+            -H "X-LSCACHE-Purge: *" \
+            --max-time 10 \
+            --retry 2 \
+            || echo "Cache purge request failed or timed out — continuing anyway"
