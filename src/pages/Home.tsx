@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
+import Reviews from '../components/Reviews';
 
 export default function Home() {
   return (
@@ -180,6 +181,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Client Reviews */}
+      <Reviews />
 
       {/* Map Section */}
       <section className="py-20 bg-white">
