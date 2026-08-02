@@ -34,6 +34,7 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+          timeout: 120000
           local-dir: ./dist/         # Vite's build output folder
           server-dir: /domains/theeatcgroups.com/public_html/  # confirmed real doc root via whereami.php
           exclude: |
