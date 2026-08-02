@@ -4,24 +4,40 @@ export default function About() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[600px] flex items-center overflow-hidden bg-pattern">
-        <div className="absolute inset-0 z-0">
-          <img
-            className="w-full h-full object-cover grayscale opacity-30"
-            src="/assets/About/hero-bg.png"
-            alt="Corporate Interior"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-white to-transparent"></div>
-        </div>
+      <section className="relative h-[600px] flex items-center overflow-hidden bg-primary">
+        {/* Column-line pattern, evokes courthouse pillars */}
+        <div
+          className="absolute inset-0 opacity-[0.06] pointer-events-none"
+          style={{
+            backgroundImage:
+              'repeating-linear-gradient(90deg, transparent, transparent 78px, #ffffff 78px, #ffffff 80px)',
+          }}
+        ></div>
+        {/* Soft teal glow */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background:
+              'radial-gradient(circle at 15% 40%, rgba(13,148,136,0.18), transparent 55%)',
+          }}
+        ></div>
+        {/* Oversized watermark icon */}
+        <span
+          className="material-symbols-outlined absolute -right-24 top-1/2 -translate-y-1/2 text-white/[0.04] pointer-events-none select-none"
+          style={{ fontSize: '34rem', fontVariationSettings: "'FILL' 1" }}
+        >
+          gavel
+        </span>
+
         <div className="relative z-10 max-w-[1200px] mx-auto px-10 w-full">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="max-w-2xl"
           >
             <span className="inline-block py-1 px-3 bg-secondary-container text-on-secondary-container text-xs font-bold rounded-full mb-6">ESTABLISHED 2008</span>
-            <h1 className="text-5xl font-display font-bold text-primary mb-8">Our Mission: Precision in Every Seal</h1>
-            <p className="text-lg text-on-surface-variant leading-relaxed">
+            <h1 className="text-5xl font-display font-bold text-white mb-8">Our Mission: Precision in Every Seal</h1>
+            <p className="text-lg text-white/70 leading-relaxed">
               We provide seamless, legal-grade document attestation services for global citizens and enterprises, ensuring every signature and stamp carries the weight of absolute trust.
             </p>
           </motion.div>
@@ -73,7 +89,7 @@ export default function About() {
               <motion.div 
                 key={value.title}
                 whileHover={{ y: -5 }}
-                className="p-8 bg-white border border-outline-variant rounded-2xl hover:border-primary transition-all"
+                className="p-8 bg-white border border-outline-variant rounded-2xl hover:border-accent transition-all"
               >
                 <span className="material-symbols-outlined text-primary text-4xl mb-6">{value.icon}</span>
                 <h3 className="text-lg font-display font-bold text-primary mb-3">{value.title}</h3>
@@ -94,7 +110,7 @@ export default function About() {
             Experience the world-class standard in document attestation. Clear, fast, and legally sound.
           </p>
           <div className="flex justify-center gap-4">
-            <button className="border border-white/30 text-white px-8 py-3 rounded-full font-bold hover:bg-white/10 transition-colors">
+            <button className="bg-accent text-white px-8 py-3 rounded-full font-bold hover:opacity-90 transition-opacity">
               Contact Our Experts
             </button>
           </div>

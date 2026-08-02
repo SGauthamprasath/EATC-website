@@ -19,7 +19,7 @@ export default function StarRating({ rating, size = 'md', interactive = false, o
           key={value}
           onClick={interactive ? () => onChange?.(value) : undefined}
           className={`material-symbols-outlined ${sizeClasses[size]} ${
-            value <= rating ? 'text-primary' : 'text-outline-variant'
+            value <= rating ? 'text-accent' : 'text-outline-variant'
           } ${interactive ? 'cursor-pointer transition-transform hover:scale-110' : ''}`}
           style={{ fontVariationSettings: `'FILL' ${value <= rating ? 1 : 0}` }}
         >

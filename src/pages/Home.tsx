@@ -6,42 +6,70 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-white py-20 md:py-32 overflow-hidden border-b border-outline-variant">
-        <div className="max-w-[1200px] mx-auto px-10 grid md:grid-cols-2 gap-12 items-center">
-          <motion.div 
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            className="relative z-10"
-          >
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold mb-6">
-              <span className="material-symbols-outlined text-base">verified_user</span>
-              ISO 9001:2015 Certified Service
-            </div>
-            <h1 className="text-5xl md:text-6xl font-display font-bold text-primary mb-6 leading-tight">
-              Legal-Grade Document Attestation You Can Trust.
-            </h1>
-            <p className="text-lg text-on-surface-variant mb-10 max-w-lg leading-relaxed">
-              EATC Group provides seamless, secure, and fast embassy and educational attestation services globally. We handle the complexity, you get peace of mind.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-white border border-outline-variant text-primary px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-surface-container transition-colors">
-                Track Document Status
-              </button>
-            </div>
-          </motion.div>
+      <section className="relative overflow-hidden">
+        <div className="grid md:grid-cols-2">
+          {/* Dark panel */}
+          <div className="relative bg-primary pl-10 pr-10 md:pl-[max(2.5rem,calc((100vw-1200px)/2+2.5rem))] py-20 md:py-32 flex items-center overflow-hidden">
+            <div className="absolute -bottom-24 -left-24 w-72 h-72 rounded-full border border-white/5"></div>
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              className="relative z-10 max-w-lg"
+            >
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold mb-6">
+                <span className="material-symbols-outlined text-base">verified_user</span>
+                ISO 9001:2015 Certified Service
+              </div>
+              <h1 className="text-5xl md:text-6xl font-display font-bold text-white mb-6 leading-tight">
+                Legal-Grade Document Attestation You Can Trust.
+              </h1>
+              <p className="text-lg text-white/70 mb-10 leading-relaxed">
+                EATC Group provides seamless, secure, and fast embassy and educational attestation services globally. We handle the complexity, you get peace of mind.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <button className="border border-white/30 text-white px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-white/10 transition-colors">
+                  Track Document Status
+                </button>
+                <Link
+                  to="/about"
+                  className="bg-accent text-white px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:opacity-90 transition-opacity"
+                >
+                  Learn More
+                </Link>
+              </div>
+            </motion.div>
+          </div>
 
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="relative"
-          >
-            <img
-              className="rounded-2xl w-full h-[500px] object-cover border border-outline-variant shadow-lg"
+          {/* Light panel */}
+          <div className="relative bg-surface-container min-h-[360px] md:min-h-0 overflow-hidden">
+            <motion.img
+              initial={{ opacity: 0, scale: 1.05 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, ease: 'easeOut' }}
+              className="absolute inset-0 w-full h-full object-cover"
               src="/assets/Home/unnamed.png"
               alt="Professional Business Setting"
             />
-            {/* Floating status card removed per design update */}
-          </motion.div>
+          </div>
+        </div>
+
+        {/* Stats Bar */}
+        <div className="bg-white border-y border-outline-variant">
+          <div className="max-w-[1200px] mx-auto px-10 py-10 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            {[
+              { value: '18+', label: 'Years Experience' },
+              { value: '15k+', label: 'Documents Processed' },
+              { value: '150+', label: 'Countries Served' },
+              { value: '24/7', label: 'Dedicated Support' },
+            ].map((stat) => (
+              <div key={stat.label}>
+                <div className="text-3xl font-display font-bold text-primary">{stat.value}</div>
+                <div className="text-[10px] text-on-surface-variant uppercase tracking-widest font-bold mt-1">
+                  {stat.label}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -54,7 +82,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="md:col-span-2 bg-white p-8 rounded-2xl border border-outline-variant hover:border-primary transition-all group relative overflow-hidden">
+            <div className="md:col-span-2 bg-white p-8 rounded-2xl border border-outline-variant hover:border-accent transition-all group relative overflow-hidden">
               <div className="flex flex-col md:flex-row gap-8">
                 <div className="md:w-1/2">
                   <span className="material-symbols-outlined text-primary text-4xl mb-4">account_balance</span>
@@ -64,11 +92,11 @@ export default function Home() {
                   </p>
                   <ul className="space-y-3 mb-6">
                     <li className="flex items-center gap-2 text-sm font-medium">
-                      <span className="material-symbols-outlined text-primary text-lg">check_circle</span>
+                      <span className="material-symbols-outlined text-accent text-lg">check_circle</span>
                       UAE, Qatar, Saudi Arabia Specialists
                     </li>
                     <li className="flex items-center gap-2 text-sm font-medium">
-                      <span className="material-symbols-outlined text-primary text-lg">check_circle</span>
+                      <span className="material-symbols-outlined text-accent text-lg">check_circle</span>
                       Apostille & Legalization Services
                     </li>
                   </ul>
@@ -97,7 +125,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-white p-8 rounded-2xl border border-outline-variant hover:border-primary transition-all group overflow-hidden flex flex-col">
+            <div className="bg-white p-8 rounded-2xl border border-outline-variant hover:border-accent transition-all group overflow-hidden flex flex-col">
               <div className="h-40 rounded-xl overflow-hidden mb-6 border border-outline-variant relative">
                 <img
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
@@ -113,7 +141,7 @@ export default function Home() {
               </Link>
             </div>
 
-            <div className="bg-white p-8 rounded-2xl border border-outline-variant hover:border-primary transition-all group overflow-hidden flex flex-col">
+            <div className="bg-white p-8 rounded-2xl border border-outline-variant hover:border-accent transition-all group overflow-hidden flex flex-col">
               <div className="h-40 rounded-xl overflow-hidden mb-6 border border-outline-variant relative">
                 <img
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
@@ -129,7 +157,7 @@ export default function Home() {
               </Link>
             </div>
 
-            <div className="bg-white p-8 rounded-2xl border border-outline-variant hover:border-primary transition-all group overflow-hidden flex flex-col">
+            <div className="bg-white p-8 rounded-2xl border border-outline-variant hover:border-accent transition-all group overflow-hidden flex flex-col">
               <div className="h-40 rounded-xl overflow-hidden mb-6 border border-outline-variant relative">
                 <img
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
@@ -199,14 +227,14 @@ export default function Home() {
                   <div 
                     key={office.name} 
                     className={`p-4 rounded-xl border flex justify-between items-center transition-all cursor-pointer ${
-                      office.active ? 'bg-surface-container border-primary' : 'bg-white border-outline-variant hover:bg-surface'
+                      office.active ? 'bg-surface-container border-accent' : 'bg-white border-outline-variant hover:bg-surface'
                     }`}
                   >
                     <div>
                       <h5 className="font-bold text-primary text-sm">{office.name}</h5>
                       <p className="text-xs text-on-surface-variant mt-1">{office.loc}</p>
                     </div>
-                    <span className={`material-symbols-outlined ${office.active ? 'text-primary' : 'text-on-surface-variant'}`}>directions</span>
+                    <span className={`material-symbols-outlined ${office.active ? 'text-accent' : 'text-on-surface-variant'}`}>directions</span>
                   </div>
                 ))}
               </div>

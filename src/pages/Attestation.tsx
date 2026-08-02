@@ -68,23 +68,36 @@ export default function Attestation() {
   return (
     <main className="min-h-screen">
       {/* Hero Section (enhanced) */}
-      <section className="relative h-[600px] flex items-center overflow-hidden bg-pattern">
-        <div className="absolute inset-0 z-0">
-          <img
-            className="w-full h-full object-cover grayscale opacity-30"
-            src="/assets/Attestation/hero-bg.png"
-            alt="Corporate Interior"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-white to-transparent"></div>
-        </div>
+      <section className="relative h-[600px] flex items-center overflow-hidden bg-primary">
+        <div
+          className="absolute inset-0 opacity-[0.06] pointer-events-none"
+          style={{
+            backgroundImage:
+              'repeating-linear-gradient(90deg, transparent, transparent 78px, #ffffff 78px, #ffffff 80px)',
+          }}
+        ></div>
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background:
+              'radial-gradient(circle at 15% 40%, rgba(13,148,136,0.18), transparent 55%)',
+          }}
+        ></div>
+        <span
+          className="material-symbols-outlined absolute -right-24 top-1/2 -translate-y-1/2 text-white/[0.04] pointer-events-none select-none"
+          style={{ fontSize: '34rem', fontVariationSettings: "'FILL' 1" }}
+        >
+          verified
+        </span>
+
         <div className="relative z-10 max-w-[1200px] mx-auto px-10 w-full">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="max-w-2xl"
           >
-            <h1 className="text-5xl font-display font-bold text-primary mb-8">Document Attestation</h1>
-            <p className="text-lg text-on-surface-variant leading-relaxed">
+            <h1 className="text-5xl font-display font-bold text-white mb-8">Document Attestation</h1>
+            <p className="text-lg text-white/70 leading-relaxed">
               Comprehensive verification and legalization for your important certificates and documents — from educational transcripts to commercial records, we ensure global acceptability.
             </p>
           </motion.div>
@@ -103,9 +116,9 @@ export default function Attestation() {
             <h2 className="text-3xl font-display font-bold text-primary mb-4">Comprehensive Document Care</h2>
             <p className="text-on-surface-variant mb-6 leading-relaxed">From educational transcripts to commercial paperwork, our team validates, certifies and prepares documents for international acceptance — with clear steps and timelines.</p>
             <ul className="space-y-3 mb-6">
-              <li className="flex items-start gap-3 text-sm"><span className="material-symbols-outlined text-primary">check_circle</span> Professional verification and formatting</li>
-              <li className="flex items-start gap-3 text-sm"><span className="material-symbols-outlined text-primary">check_circle</span> MEA, Apostille and state-level processing</li>
-              <li className="flex items-start gap-3 text-sm"><span className="material-symbols-outlined text-primary">check_circle</span> Secure physical handling and returns</li>
+              <li className="flex items-start gap-3 text-sm"><span className="material-symbols-outlined text-accent">check_circle</span> Professional verification and formatting</li>
+              <li className="flex items-start gap-3 text-sm"><span className="material-symbols-outlined text-accent">check_circle</span> MEA, Apostille and state-level processing</li>
+              <li className="flex items-start gap-3 text-sm"><span className="material-symbols-outlined text-accent">check_circle</span> Secure physical handling and returns</li>
             </ul>
 
           </motion.div>
@@ -120,7 +133,7 @@ export default function Attestation() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.05 }}
               viewport={{ once: true }}
-              className="bg-white border border-outline-variant rounded-3xl overflow-hidden hover:border-primary hover:shadow-xl transition-all flex flex-col group"
+              className="bg-white border border-outline-variant rounded-3xl overflow-hidden hover:border-accent hover:shadow-xl transition-all flex flex-col group"
             >
               <div className="h-48 overflow-hidden">
                 <img

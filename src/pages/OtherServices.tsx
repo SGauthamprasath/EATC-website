@@ -43,23 +43,36 @@ export default function OtherServices() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[600px] flex items-center overflow-hidden bg-pattern">
-        <div className="absolute inset-0 z-0">
-          <img
-            className="w-full h-full object-cover grayscale opacity-30"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzkcIszeZ9xWItQ2-USAtmDyShMNKtG6M_ctcRplsz7Zh_TwONcVWXIpnykJtZGIs8m_eYi4ErLgdTsv0q6xxROpPRNJfJqFFvu6Hn0ksNXuPhUJHfLC13i8RTm_Pla84H00CA9ewmOcnd78ucnEfquPzWI4H7JORUyy_7UZxbkS7TOgUanK4UoNWkEe1T8j_6ukKPN79-P-h_r433---pP74wZxSoVwBw0YsvrWfJf1D3BFX92xHFlbOXT78FPfWSU4Kcdn0o4bQ"
-            alt="Corporate Interior"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-white to-transparent"></div>
-        </div>
+      <section className="relative h-[600px] flex items-center overflow-hidden bg-primary">
+        <div
+          className="absolute inset-0 opacity-[0.06] pointer-events-none"
+          style={{
+            backgroundImage:
+              'repeating-linear-gradient(90deg, transparent, transparent 78px, #ffffff 78px, #ffffff 80px)',
+          }}
+        ></div>
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background:
+              'radial-gradient(circle at 15% 40%, rgba(13,148,136,0.18), transparent 55%)',
+          }}
+        ></div>
+        <span
+          className="material-symbols-outlined absolute -right-24 top-1/2 -translate-y-1/2 text-white/[0.04] pointer-events-none select-none"
+          style={{ fontSize: '34rem', fontVariationSettings: "'FILL' 1" }}
+        >
+          grid_view
+        </span>
+
         <div className="relative z-10 max-w-[1200px] mx-auto px-10 w-full">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="max-w-2xl"
           >
-            <h1 className="text-5xl font-display font-bold text-primary mb-8">Other Essential Services</h1>
-            <p className="text-lg text-on-surface-variant leading-relaxed">
+            <h1 className="text-5xl font-display font-bold text-white mb-8">Other Essential Services</h1>
+            <p className="text-lg text-white/70 leading-relaxed">
               Specialized administrative and legal support services to facilitate your global documentation journey.
             </p>
           </motion.div>
@@ -78,11 +91,11 @@ export default function OtherServices() {
             <h2 className="text-3xl font-display font-bold text-primary mb-4">Support Services That Move With You</h2>
             <p className="text-on-surface-variant mb-6 leading-relaxed">Beyond attestations, we provide PCCs, translations, notary services and verification for credential evaluation — all coordinated end-to-end.</p>
             <ul className="space-y-3 mb-6">
-              <li className="flex items-start gap-3 text-sm"><span className="material-symbols-outlined text-primary">check_circle</span> Certified translations and notarizations</li>
-              <li className="flex items-start gap-3 text-sm"><span className="material-symbols-outlined text-primary">check_circle</span> Credential evaluation support (WES, IQAS)</li>
-              <li className="flex items-start gap-3 text-sm"><span className="material-symbols-outlined text-primary">check_circle</span> Custom packages for frequent corporate clients</li>
+              <li className="flex items-start gap-3 text-sm"><span className="material-symbols-outlined text-accent">check_circle</span> Certified translations and notarizations</li>
+              <li className="flex items-start gap-3 text-sm"><span className="material-symbols-outlined text-accent">check_circle</span> Credential evaluation support (WES, IQAS)</li>
+              <li className="flex items-start gap-3 text-sm"><span className="material-symbols-outlined text-accent">check_circle</span> Custom packages for frequent corporate clients</li>
             </ul>
-            <Link to="/contact" className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-xl font-bold hover:opacity-90">Contact Us <span className="material-symbols-outlined">arrow_forward</span></Link>
+            <Link to="/contact" className="inline-flex items-center gap-2 bg-accent text-white px-6 py-3 rounded-xl font-bold hover:opacity-90">Contact Us <span className="material-symbols-outlined">arrow_forward</span></Link>
           </motion.div>
         </div>
       </section>
@@ -95,7 +108,7 @@ export default function OtherServices() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.05 }}
               viewport={{ once: true }}
-              className="bg-white border border-outline-variant rounded-3xl overflow-hidden hover:border-primary hover:shadow-xl transition-all flex flex-col group"
+              className="bg-white border border-outline-variant rounded-3xl overflow-hidden hover:border-accent hover:shadow-xl transition-all flex flex-col group"
             >
               <div className="h-48 overflow-hidden">
                 <img

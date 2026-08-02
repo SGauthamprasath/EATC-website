@@ -87,7 +87,7 @@ export default function ReviewModal({ open, onClose, onSubmitted }: Props) {
               <div className="space-y-2">
                 <label className="text-xs font-bold text-primary uppercase tracking-wider">Your Name</label>
                 <input
-                  className="w-full bg-surface border border-outline-variant rounded-lg px-4 py-3 focus:border-primary focus:ring-0 transition-all outline-none"
+                  className="w-full bg-surface border border-outline-variant rounded-lg px-4 py-3 focus:border-accent focus:ring-0 transition-all outline-none"
                   placeholder="Jane Doe"
                   type="text"
                   value={name}
@@ -106,7 +106,7 @@ export default function ReviewModal({ open, onClose, onSubmitted }: Props) {
                   <span className="text-[10px] text-on-surface-variant">{comment.length} / {MAX_COMMENT_LENGTH}</span>
                 </div>
                 <textarea
-                  className="w-full bg-surface border border-outline-variant rounded-lg px-4 py-3 focus:border-primary focus:ring-0 transition-all outline-none"
+                  className="w-full bg-surface border border-outline-variant rounded-lg px-4 py-3 focus:border-accent focus:ring-0 transition-all outline-none"
                   placeholder="Tell us about your experience..."
                   rows={4}
                   maxLength={MAX_COMMENT_LENGTH}
@@ -120,7 +120,7 @@ export default function ReviewModal({ open, onClose, onSubmitted }: Props) {
               <button
                 type="submit"
                 disabled={submitting}
-                className="w-full bg-primary text-white font-bold py-4 rounded-xl hover:opacity-90 transition-opacity flex items-center justify-center gap-2 disabled:opacity-60"
+                className="w-full bg-accent text-white font-bold py-4 rounded-xl hover:opacity-90 transition-opacity flex items-center justify-center gap-2 disabled:opacity-60"
               >
                 {submitting ? 'Submitting...' : 'Submit Review'}
               </button>

@@ -41,23 +41,36 @@ export default function Contact() {
   return (
     <main className="min-h-screen">
       {/* Header */}
-      <section className="relative h-[600px] flex items-center overflow-hidden bg-pattern">
-        <div className="absolute inset-0 z-0">
-          <img
-            className="w-full h-full object-cover grayscale opacity-30"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzkcIszeZ9xWItQ2-USAtmDyShMNKtG6M_ctcRplsz7Zh_TwONcVWXIpnykJtZGIs8m_eYi4ErLgdTsv0q6xxROpPRNJfJqFFvu6Hn0ksNXuPhUJHfLC13i8RTm_Pla84H00CA9ewmOcnd78ucnEfquPzWI4H7JORUyy_7UZxbkS7TOgUanK4UoNWkEe1T8j_6ukKPN79-P-h_r433---pP74wZxSoVwBw0YsvrWfJf1D3BFX92xHFlbOXT78FPfWSU4Kcdn0o4bQ"
-            alt="Corporate Interior"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-white to-transparent"></div>
-        </div>
+      <section className="relative h-[600px] flex items-center overflow-hidden bg-primary">
+        <div
+          className="absolute inset-0 opacity-[0.06] pointer-events-none"
+          style={{
+            backgroundImage:
+              'repeating-linear-gradient(90deg, transparent, transparent 78px, #ffffff 78px, #ffffff 80px)',
+          }}
+        ></div>
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background:
+              'radial-gradient(circle at 15% 40%, rgba(13,148,136,0.18), transparent 55%)',
+          }}
+        ></div>
+        <span
+          className="material-symbols-outlined absolute -right-24 top-1/2 -translate-y-1/2 text-white/[0.04] pointer-events-none select-none"
+          style={{ fontSize: '34rem', fontVariationSettings: "'FILL' 1" }}
+        >
+          support_agent
+        </span>
+
         <div className="relative z-10 max-w-[1200px] mx-auto px-10 w-full">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="max-w-2xl"
           >
-            <h1 className="text-5xl font-display font-bold text-primary mb-8">Connect with our Experts</h1>
-            <p className="text-lg text-on-surface-variant leading-relaxed">
+            <h1 className="text-5xl font-display font-bold text-white mb-8">Connect with our Experts</h1>
+            <p className="text-lg text-white/70 leading-relaxed">
               Providing legal-grade attestation services with absolute precision. Our dedicated team is ready to assist you with your global documentation needs.
             </p>
           </motion.div>
@@ -68,7 +81,7 @@ export default function Contact() {
       <section className="max-w-[1200px] mx-auto px-10 py-16">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
           <div className="md:col-span-5 flex flex-col gap-6">
-            <div className="bg-white p-8 border border-outline-variant rounded-2xl hover:border-primary transition-all">
+            <div className="bg-white p-8 border border-outline-variant rounded-2xl hover:border-accent transition-all">
               <div className="flex items-start gap-6">
                 <div className="bg-secondary-container p-3 rounded-full flex items-center justify-center">
                   <span className="material-symbols-outlined text-primary">call</span>
@@ -81,7 +94,7 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="bg-white p-8 border border-outline-variant rounded-2xl hover:border-primary transition-all">
+            <div className="bg-white p-8 border border-outline-variant rounded-2xl hover:border-accent transition-all">
               <div className="flex items-start gap-6">
                 <div className="bg-secondary-container p-3 rounded-full flex items-center justify-center">
                   <span className="material-symbols-outlined text-primary">mail</span>
@@ -93,7 +106,7 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="bg-white p-8 border border-outline-variant rounded-2xl hover:border-primary transition-all flex-grow">
+            <div className="bg-white p-8 border border-outline-variant rounded-2xl hover:border-accent transition-all flex-grow">
               <div className="flex items-start gap-6">
                 <div className="bg-secondary-container p-3 rounded-full flex items-center justify-center">
                   <span className="material-symbols-outlined text-primary">location_on</span>
@@ -117,7 +130,7 @@ export default function Contact() {
                 <div className="space-y-2">
                   <label className="text-xs font-bold text-primary uppercase tracking-wider">First Name</label>
                   <input
-                    className="w-full bg-surface border border-outline-variant rounded-lg px-4 py-3 focus:border-primary focus:ring-0 transition-all outline-none"
+                    className="w-full bg-surface border border-outline-variant rounded-lg px-4 py-3 focus:border-accent focus:ring-0 transition-all outline-none"
                     placeholder="John"
                     type="text"
                     name="firstName"
@@ -128,7 +141,7 @@ export default function Contact() {
                 <div className="space-y-2">
                   <label className="text-xs font-bold text-primary uppercase tracking-wider">Last Name</label>
                   <input
-                    className="w-full bg-surface border border-outline-variant rounded-lg px-4 py-3 focus:border-primary focus:ring-0 transition-all outline-none"
+                    className="w-full bg-surface border border-outline-variant rounded-lg px-4 py-3 focus:border-accent focus:ring-0 transition-all outline-none"
                     placeholder="Doe"
                     type="text"
                     name="lastName"
@@ -140,7 +153,7 @@ export default function Contact() {
               <div className="space-y-2">
                 <label className="text-xs font-bold text-primary uppercase tracking-wider">Email Address</label>
                 <input
-                  className="w-full bg-surface border border-outline-variant rounded-lg px-4 py-3 focus:border-primary focus:ring-0 transition-all outline-none"
+                  className="w-full bg-surface border border-outline-variant rounded-lg px-4 py-3 focus:border-accent focus:ring-0 transition-all outline-none"
                   placeholder="j.doe@company.com"
                   type="email"
                   name="email"
@@ -151,7 +164,7 @@ export default function Contact() {
               <div className="space-y-2">
                 <label className="text-xs font-bold text-primary uppercase tracking-wider">Service Interest</label>
                 <select
-                  className="w-full bg-surface border border-outline-variant rounded-lg px-4 py-3 focus:border-primary focus:ring-0 transition-all outline-none appearance-none"
+                  className="w-full bg-surface border border-outline-variant rounded-lg px-4 py-3 focus:border-accent focus:ring-0 transition-all outline-none appearance-none"
                   name="serviceInterest"
                   value={formData.serviceInterest}
                   onChange={handleChange}
@@ -165,7 +178,7 @@ export default function Contact() {
               <div className="space-y-2">
                 <label className="text-xs font-bold text-primary uppercase tracking-wider">Message</label>
                 <textarea
-                  className="w-full bg-surface border border-outline-variant rounded-lg px-4 py-3 focus:border-primary focus:ring-0 transition-all outline-none"
+                  className="w-full bg-surface border border-outline-variant rounded-lg px-4 py-3 focus:border-accent focus:ring-0 transition-all outline-none"
                   placeholder="Tell us how we can help..."
                   rows={4}
                   name="message"
@@ -173,7 +186,7 @@ export default function Contact() {
                   onChange={handleChange}
                 ></textarea>
               </div>
-              <button className="w-full bg-primary text-white font-bold py-4 rounded-xl hover:opacity-90 transition-opacity flex items-center justify-center gap-2 group" type="submit">
+              <button className="w-full bg-accent text-white font-bold py-4 rounded-xl hover:opacity-90 transition-opacity flex items-center justify-center gap-2 group" type="submit">
                 Send Message
                 <span className="material-symbols-outlined text-base group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">send</span>
               </button>
@@ -194,7 +207,7 @@ export default function Contact() {
         />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
           <div className="bg-white p-6 rounded-2xl shadow-2xl border border-outline-variant flex items-center gap-6 min-w-[320px]">
-            <div className="bg-primary p-3 rounded-xl flex items-center justify-center">
+            <div className="bg-accent p-3 rounded-xl flex items-center justify-center">
               <span className="material-symbols-outlined text-white text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>domain</span>
             </div>
             <div>
